@@ -1,0 +1,37 @@
+.first-section {
+    color: black;
+}
+
+.second-section {
+    height: 100vh;
+    background-color: #304532;
+}
+
+.third-section {
+    color: black;
+    height: 100vh;
+    padding-top: 5%;
+}
+
+.eigth-section {
+    margin-top: 1%;
+    height: 50vh;
+    background-color: #304532;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.ninth-section {
+    height: 50vh;
+    color: black;
+    padding-top: 5%;
+    padding-left: 1%;
+}
+
+
+.stroke {
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
