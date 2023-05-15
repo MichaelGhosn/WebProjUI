@@ -1,0 +1,39 @@
+<div class="main-login-register">
+
+    <div>
+        <button mat-flat-button (click)="navigate('login')"><b *ngIf="!isRegister">Login</b><span *ngIf="isRegister">Login</span></button> | <button mat-button (click)="navigate('register')"><b *ngIf="isRegister">Register</b><span *ngIf="!isRegister">Register</span></button>
+    </div>
+    
+    <div *ngIf="isRegister">
+        <h1 style="margin-top: 2%"><b>CREATE A NEW ACCOUNT</b></h1>
+        Already have an account?<a style="color: #98FD68;cursor: pointer;" routerLink="/login"> Sign in</a>
+    </div>
+    <div *ngIf="!isRegister">
+        <h1 style="margin-top: 2%"><b>LOG INTO YOUR ACCOUNT</b></h1>
+        <p style="color: gray">Welcome back!</p>
+    </div>
+
+    <form [formGroup]="form" fxLayout="column" fxLayoutAlign="space-around start" fxLayoutGap="1px" style="margin-top: 2%">
+
+        <mat-form-field appearance="outline" fxFlex="100" *ngIf="isRegister">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" fxFlex="100">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" fxFlex="100">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password">
+        </mat-form-field>
+    
+    </form>
+    
+    <button mat-raised-button *ngIf="isRegister" class="custom-button-block" (click)="register()">Create Account</button>
+    <button mat-raised-button *ngIf="!isRegister" class="custom-button-block" (click)="login()">Log In</button>
+
+
+</div>

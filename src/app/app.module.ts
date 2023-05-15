@@ -15,6 +15,17 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { VisionComponent } from './vision/vision.component';
 import { LittleFarmComponent } from './little-farm/little-farm.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { LoginRegisterComponent } from './login-register/login-register.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreComponent } from './store/store.component';
+import {MatCardModule} from '@angular/material/card';
+import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './cart/cart.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +34,13 @@ import {MatDividerModule} from '@angular/material/divider';
     FooterComponent,
     HomeComponent,
     VisionComponent,
-    LittleFarmComponent
+    LittleFarmComponent,
+    LoginRegisterComponent,
+    StoreComponent,
+    ContactComponent,
+    CartComponent,
+    CategoriesComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +51,13 @@ import {MatDividerModule} from '@angular/material/divider';
     MatMenuModule,
     FlexLayoutModule,
     IvyCarouselModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

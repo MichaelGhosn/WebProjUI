@@ -8,17 +8,29 @@
       <span style="padding: 6%;">Menu</span>
     </button>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
+        <button mat-menu-item (click)="navigate('home')">
+          <span>Home</span>
         </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
+        <button mat-menu-item (click)="navigate('vision')">
+          <span>Vision</span>
         </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
+        <button mat-menu-item (click)="navigate('little-farm')">
+          <span>The little farm</span>
+        </button>
+        <button mat-menu-item (click)="navigate('store')">
+          <span>Our products</span>
+        </button>
+        <button mat-menu-item (click)="navigate('contact')">
+          <span>Contact</span>
+        </button>
+        <button mat-menu-item (click)="navigate('cart')" *ngIf="mainService.isAuthenticated()">
+          <span>Cart</span>
+        </button>
+        <button mat-menu-item (click)="logout()" *ngIf="mainService.isAuthenticated()">
+          <span>Logout</span>
+        </button>
+        <button mat-menu-item (click)="navigate('login')" *ngIf="!mainService.isAuthenticated()">
+          <span>Login</span>
         </button>
     </mat-menu>
 </mat-toolbar>

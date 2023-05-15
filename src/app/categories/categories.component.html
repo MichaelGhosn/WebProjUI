@@ -1,0 +1,25 @@
+<h1 style="margin-top: 2%;color: black"><b>THE CULTIVATION STORE</b></h1>
+
+<form [formGroup]="form" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="1px" style="margin-top: 2%">
+    <button mat-icon-button style="background-color: transparent; border: 0;" fxFlex="1"><mat-icon>search</mat-icon></button>
+    <mat-form-field appearance="outline" fxFlex="20">
+        <mat-label>Search</mat-label>
+        <input matInput formControlName="search">
+      </mat-form-field>
+</form>
+
+
+<div style="color: black" fxLayout="row wrap" fxLayoutAlign="space-around center">
+    <div *ngFor="let c of categories" fxFlex="20">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{c.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="'http://localhost:5000/' + c.imageUrl">
+            <mat-card-actions>
+                <button mat-button style="float: right" (click)="navigate('products', c.id)">Choose</button>
+              </mat-card-actions>
+        </mat-card>
+    </div>
+
+</div>
